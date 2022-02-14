@@ -157,12 +157,12 @@ bocinas: [74, 75, 76, 77, 78, 79, 80, 81, 82, 83]
 audifonos: [84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96]
 '''
 
+
 #Categorias (imprimiendo las menores busquedas por cateogia)
 srchs_process = lista_srchs[0:9]
 srchs_t_video = lista_srchs[9:17]
 srchs_t_madre = lista_srchs[17:23]
 srchs_driv_hd = lista_srchs[23:31]
-srchs_mem_ussb = lista_srchs[31:32]
 srchs_pantallas = lista_srchs[32:35]
 srchs_bocinas = lista_srchs[35:36]
 srchs_audifonos = lista_srchs[36:40]
@@ -170,8 +170,16 @@ print(f'Las menores busquedas por categoria son la siguientes: {srchs_process} p
 print(f'Las menores busquedas por categoria son la siguientes: {srchs_t_video} para cada Id de las tarjetas de video.\n')
 print(f'Las menores busquedas por categoria son la siguientes: {srchs_t_madre} para cada Id de las tarjetas madre.\n')
 print(f'Las menores busquedas por categoria son la siguientes: {srchs_driv_hd} para cada Id de los discos duros.\n')
-print(f'Las menores busquedas por categoria son la siguientes: {srchs_mem_ussb} para cada Id de las memorias USB.\n')
 print(f'Las menores busquedas por categoria son la siguientes: {srchs_pantallas} para cada Id de las pantallas.\n')
 print(f'Las menores busquedas por categoria son la siguientes: {srchs_bocinas} para cada Id de las bocinas.\n')
 print(f'Las menores busquedas por categoria son la siguientes: {srchs_audifonos} para cada Id de los audifonos.\n')
+
+
+print(f'Las mayores busquedas por categoria son la siguientes: {sorted(srchs_process, reverse=True)} para cada Id de los procesadores.\n')
+print(f'Las mayores busquedas por categoria son la siguientes: {sorted(srchs_t_video, reverse=True)} para cada Id de las tarjetas de video.\n')
+print(f'Las mayores busquedas por categoria son la siguientes: {sorted(srchs_t_madre, reverse=True)} para cada Id de las tarjetas madre.\n')
+print(f'Las mayores busquedas por categoria son la siguientes: {sorted(srchs_driv_hd, reverse=True)} para cada Id de los discos duros.\n')
+print(f'Las mayores busquedas por categoria son la siguientes: {sorted(srchs_pantallas, reverse=True)} para cada Id de las pantallas.\n')
+print(f'Las mayores busquedas por categoria son la siguientes: {sorted(srchs_bocinas, reverse=True)} para cada Id de las bocinas.\n')
+print(f'Las mayores busquedas por categoria son la siguientes: {sorted(srchs_audifonos, reverse=True)} para cada Id de los audifonos.\n')
 

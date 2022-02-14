@@ -192,7 +192,7 @@ def ejercicio1():
         busq_x_prod[prod_srch].append(id_srch)
     #print(busq_x_prod)
 
-    #Hacermos lista para conocer el numero de busquedasd por producto
+    #Hacermos lista para conocer el numero de busquedas por producto
     lista_srchs = []
 
     for k, v in busq_x_prod.items():
@@ -224,7 +224,6 @@ def ejercicio1():
     srchs_t_video = lista_srchs[9:17]
     srchs_t_madre = lista_srchs[17:23]
     srchs_driv_hd = lista_srchs[23:31]
-    srchs_mem_ussb = lista_srchs[31:32]
     srchs_pantallas = lista_srchs[32:35]
     srchs_bocinas = lista_srchs[35:36]
     srchs_audifonos = lista_srchs[36:40]
@@ -232,10 +231,17 @@ def ejercicio1():
     print(f'Las menores busquedas por categoria son la siguientes: {srchs_t_video} para cada Id de las tarjetas de video.\n')
     print(f'Las menores busquedas por categoria son la siguientes: {srchs_t_madre} para cada Id de las tarjetas madre.\n')
     print(f'Las menores busquedas por categoria son la siguientes: {srchs_driv_hd} para cada Id de los discos duros.\n')
-    print(f'Las menores busquedas por categoria son la siguientes: {srchs_mem_ussb} para cada Id de las memorias USB.\n')
     print(f'Las menores busquedas por categoria son la siguientes: {srchs_pantallas} para cada Id de las pantallas.\n')
     print(f'Las menores busquedas por categoria son la siguientes: {srchs_bocinas} para cada Id de las bocinas.\n')
     print(f'Las menores busquedas por categoria son la siguientes: {srchs_audifonos} para cada Id de los audifonos.\n')
+
+    print(f'Las mayores busquedas por categoria son la siguientes: {sorted(srchs_process, reverse=True)} para cada Id de los procesadores.\n')
+    print(f'Las mayores busquedas por categoria son la siguientes: {sorted(srchs_t_video, reverse=True)} para cada Id de las tarjetas de video.\n')
+    print(f'Las mayores busquedas por categoria son la siguientes: {sorted(srchs_t_madre, reverse=True)} para cada Id de las tarjetas madre.\n')
+    print(f'Las mayores busquedas por categoria son la siguientes: {sorted(srchs_driv_hd, reverse=True)} para cada Id de los discos duros.\n')
+    print(f'Las mayores busquedas por categoria son la siguientes: {sorted(srchs_pantallas, reverse=True)} para cada Id de las pantallas.\n')
+    print(f'Las mayores busquedas por categoria son la siguientes: {sorted(srchs_bocinas, reverse=True)} para cada Id de las bocinas.\n')
+    print(f'Las mayores busquedas por categoria son la siguientes: {sorted(srchs_audifonos, reverse=True)} para cada Id de los audifonos.\n')
 
 def ejercicio2():
     resultado = {}
