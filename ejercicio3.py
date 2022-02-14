@@ -42,12 +42,13 @@ for par in id_fecha:
 
 
 
-for key in categorizacion_meses.keys():
-    print(key)
-    # print(categorizacion_meses[key])
+# for key in categorizacion_meses.keys():
+    #print(key)
+    #print(categorizacion_meses[key])
 
 
 mes_info = {}
+
 for mes, ids_venta in categorizacion_meses.items():
     lista_mes = ids_venta
     suma_venta = 0
@@ -61,9 +62,9 @@ for mes, ids_venta in categorizacion_meses.items():
     #print(mes, suma_venta, f'ventas totales: {len(lista_mes)}')
     mes_info[mes] = [suma_venta, len(lista_mes)]
 
-print(' Obtenemos el total de venta que corresponde a {suma_venta}')
+print(f' Obtenemos el total de unidades vendidas que corresponde a: \n {suma_venta} unidades.')
 
-
+print('\nEl monto vendido por mes ordenado de mayor a menor es el siguiente:')
 for id_product in mes_info.keys():
     lista_reviews = mes_info[id_product]
     promedio = sum(lista_reviews) / len(lista_reviews)
@@ -71,7 +72,7 @@ for id_product in mes_info.keys():
     decimales = 2
     multiplicador = 10 ** decimales
     promedio = math.ceil(promedio * multiplicador) / multiplicador
-    print(f'{id_product} {promedio}')
+    print(f' \n{id_product} ${promedio}')
 
 
 
@@ -86,7 +87,7 @@ ord_gancia = sorted(mes_ganancia_ventas, key=lambda x:x[1], reverse=True)
 ord_ventas = sorted(mes_ganancia_ventas, key=lambda x:x[2], reverse=True)
 
 # Ventas mensuales ordenadas de mayor a menor
-print(f'\nA continuación se muestran los meses ordenados de mayor a menor con base en sus ventas {ord_ventas}')
+print(f'\n A continuación se muestran los meses ordenados de mayor a menor con base en las unidades vendidas: \n{ord_ventas}\n ')
 
 # Obtenemos el total de ventas en cantidad monetaria
 

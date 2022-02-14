@@ -115,3 +115,63 @@ process_ord = sorted(process, key= lambda x:x[1], reverse=True)
 # print('AUDIFONOS')
 # print(f'\t{audifonos}')
 # print(f'\n5 Audifonos con menores ventas son: \n\n\t{audifonos_ord[0:5]}\n')
+
+#Traer searches 
+meno_srch = [[srchs[0], srchs[1]] for srchs in lifestore_searches]
+#print(meno_srch)
+
+#Hacemos diccionario para clasificas las busquedas que  tiene cada producto
+busq_x_prod = {}
+for busq in meno_srch:
+    id_srch = busq[0] 
+    prod_srch = busq[1]
+    if prod_srch not in busq_x_prod.keys():
+        busq_x_prod[prod_srch] = []
+    busq_x_prod[prod_srch].append(id_srch)
+#print(busq_x_prod)
+
+#Hacermos lista para conocer el numero de busquedasd por producto
+lista_srchs = []
+
+for k, v in busq_x_prod.items():
+    ñ = (len(v))
+    srchsilista = [k, ñ]
+    lista_srchs.append(srchsilista)
+    #if cosa != conteo:
+        #print(cosa, len(conteo))
+
+    #print(len(producto_ventas))
+#print(f'{lista_srchs}\n\n\n\n')#Conocer el total numero de busquedas por ID PRODUCTO
+elementos_porcategoria = (len(lista_srchs))
+#print (elementos_porcategoria)
+
+'''
+LISTA DE CATEGORIAS
+procesadores: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+tarjetas de video: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]
+tarjetas madre: [29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46]
+discos duros: [47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59]
+memorias usb: [60, 61]
+pantallas: [62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73]
+bocinas: [74, 75, 76, 77, 78, 79, 80, 81, 82, 83]
+audifonos: [84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96]
+'''
+
+#Categorias (imprimiendo las menores busquedas por cateogia)
+srchs_process = lista_srchs[0:9]
+srchs_t_video = lista_srchs[9:17]
+srchs_t_madre = lista_srchs[17:23]
+srchs_driv_hd = lista_srchs[23:31]
+srchs_mem_ussb = lista_srchs[31:32]
+srchs_pantallas = lista_srchs[32:35]
+srchs_bocinas = lista_srchs[35:36]
+srchs_audifonos = lista_srchs[36:40]
+print(f'Las menores busquedas por categoria son la siguientes: {srchs_process} para cada Id de los procesadores.\n')
+print(f'Las menores busquedas por categoria son la siguientes: {srchs_t_video} para cada Id de las tarjetas de video.\n')
+print(f'Las menores busquedas por categoria son la siguientes: {srchs_t_madre} para cada Id de las tarjetas madre.\n')
+print(f'Las menores busquedas por categoria son la siguientes: {srchs_driv_hd} para cada Id de los discos duros.\n')
+print(f'Las menores busquedas por categoria son la siguientes: {srchs_mem_ussb} para cada Id de las memorias USB.\n')
+print(f'Las menores busquedas por categoria son la siguientes: {srchs_pantallas} para cada Id de las pantallas.\n')
+print(f'Las menores busquedas por categoria son la siguientes: {srchs_bocinas} para cada Id de las bocinas.\n')
+print(f'Las menores busquedas por categoria son la siguientes: {srchs_audifonos} para cada Id de los audifonos.\n')
+

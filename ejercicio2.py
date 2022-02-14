@@ -52,3 +52,6 @@ resutltado_ordenado = sorted(listaResultado,key= lambda x : x[1][2],reverse=Fals
 
 print("Los siguientes productos son aquellos que obtuvieron las mejores reseñas, con el formato (ID producto/ La suma de la calificación de reseñas/ La cantidad de reseñas/ El promedio de la reseñas)")
 print(f'{resutltado_ordenado[0:5]}')
+
+
+
