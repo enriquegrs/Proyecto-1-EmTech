@@ -33,8 +33,8 @@ considerando los productos con devolucion.
 resultado = {}
 for item in lifestore_sales:
     idproducto = str(item[1])
-    if item[4] == 0:
-        continue
+    # if item[4] == 0:
+    #     continue
     if idproducto in  resultado.keys():
         resultado[idproducto][0] = resultado[idproducto][0] + item[2]
         resultado[idproducto][1] = resultado[idproducto][1] + 1
@@ -50,7 +50,7 @@ listaResultado = list(resultado.items())
 
 resutltado_ordenado = sorted(listaResultado,key= lambda x : x[1][2],reverse=False)
 
-print("Los siguientes productos son aquellos que obtuvieron las mejores reseñas, con el formato (ID producto/ La suma de la calificación de reseñas/ La cantidad de reseñas/ El promedio de la reseñas)")
+print("Los siguientes productos son aquellos que obtuvieron las peores reseñas, con el formato (ID producto/ La suma de la calificación de reseñas/ La cantidad de reseñas/ El promedio de la reseñas)")
 print(f'{resutltado_ordenado[0:5]}')
 
 
