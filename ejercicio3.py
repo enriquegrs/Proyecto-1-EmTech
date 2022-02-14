@@ -62,7 +62,7 @@ for mes, ids_venta in categorizacion_meses.items():
     #print(mes, suma_venta, f'ventas totales: {len(lista_mes)}')
     mes_info[mes] = [suma_venta, len(lista_mes)]
 
-print(f' Obtenemos el total de unidades vendidas que corresponde a: \n {suma_venta} unidades.')
+
 
 print('\nEl monto vendido por mes ordenado de mayor a menor es el siguiente:')
 for id_product in mes_info.keys():
@@ -94,3 +94,11 @@ print(f'\n A continuación se muestran los meses ordenados de mayor a menor con 
 alventas = [['04', 191066, 74], ['01', 117738, 52], ['03', 162931, 49], ['02', 107270, 40], ['05', 91936, 34], ['07', 26949, 11], ['06', 36949, 11], ['08', 3077, 3]]
 total_ventas = [191066,117738,162931,107270,91936,26949,36949,3077]
 print(f' Los ingresos totales corresponden a $ {(sum(total_ventas))}')
+
+print(f' Obtenemos el total de unidades vendidas que corresponde en lo que va del año corresponde a 283 unidades.')
+
+regr = [[reg[1], reg[4]] for reg in lifestore_sales if reg[4] == 1]
+print(regr)
+
+print('Las devoluciones suman 9 y corresponden al mismo numero de productos')
+print(f'Por lo tanto la ventas totales netas son {283-9}')
